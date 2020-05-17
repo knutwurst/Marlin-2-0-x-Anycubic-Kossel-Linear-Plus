@@ -2,6 +2,8 @@
 
 # Current Marlin Version: 2.0.5.3 - Be careful! This Version is *work in progress* and not intended for daily use!
 
+![Kossel Plus with 12864 LCD](images/kosselplus_lcd_full.jpg)
+
 These configurations activate many of the new advanced features of the Marlin firmware:
 
  * Auto Calibration
