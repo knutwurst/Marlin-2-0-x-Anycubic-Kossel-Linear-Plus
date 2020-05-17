@@ -7,8 +7,8 @@
 These configurations activate many of the new advanced features of the Marlin firmware:
 
  * Auto Calibration
- * Auto Bed Leveling
- * Unified Bed Levebling (UBL)
+ * S-Curve Acceleration
+ * Unified Bed Leveling (UBL)
  * Manual Mesh Edit via LCD
  * Full LCD 12864 Full Graphic Smart Controller Support
  * 3 builtin Games (Brickout, Invaders and Snake)
