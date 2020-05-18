@@ -8,6 +8,7 @@ These configurations activate many of the new advanced features of the Marlin fi
 
  * Auto Calibration
  * S-Curve Acceleration
+ * Babystepping while printing (double click on control knob)
  * Unified Bed Leveling (UBL)
  * Manual Mesh Edit via LCD
  * Full LCD 12864 Full Graphic Smart Controller Support
