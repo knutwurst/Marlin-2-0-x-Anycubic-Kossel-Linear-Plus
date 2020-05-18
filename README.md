@@ -57,4 +57,4 @@ If you select the `ANYCUBIC_PROBE_VERSION 0`: It's very important to follow the 
 * Subtract this number from the value in `Configuration > Delta Calibration > Delta Settings > Height`. (If it's negative, add it).
 * Save and try the paper test again to verify your height.
 * `Configuration > Store Settings`
-* Motion > Bed Leveling (using paper test)
+* `Motion > Unified Bed Leveling (UBL) > Step By Step Bed Leveling`
