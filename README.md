@@ -1,6 +1,6 @@
 # Readme
 
-# Current Marlin Version: 2.0.5.3 - Be careful! This Version is *work in progress* and not intended for daily use!
+# Current Marlin Version: 2.0.5.3
 
 ![Kossel Plus with 12864 LCD](images/kosselplus_lcd_full.jpg)
 
@@ -12,6 +12,7 @@ These configurations activate many of the new advanced features of the Marlin fi
  * Unified Bed Leveling (UBL)
  * Manual Mesh Edit via LCD
  * Full LCD 12864 Full Graphic Smart Controller Support
+ * Progress Bar support fpr 2004 and 12864 LCD
  * 3 builtin Games (Brickout, Invaders and Snake)
  * Pause & Filament Change
 
