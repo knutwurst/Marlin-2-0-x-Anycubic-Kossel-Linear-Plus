@@ -13,8 +13,11 @@ These configurations activate many of the new advanced features of the Marlin fi
  * Manual Mesh Edit via LCD
  * Full LCD 12864 Full Graphic Smart Controller Support
  * Progress Bar support for 2004 and 12864 LCD
- * 3 builtin Games (Brickout, Invaders and Snake)
  * Pause & Filament Change
+
+...and Games! (klick below)
+
+[![Games on Anycubic Kossel Plus](https://img.youtube.com/vi/zc9mY9pi9JI/0.jpg)](https://www.youtube.com/watch?v=zc9mY9pi9JI)
 
 **Note** If you want to use the old 2004-Style LCD, which comes with the printer out of the box, just comment `#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER` out and uncomment `#define REPRAP_DISCOUNT_SMART_CONTROLLER` in `configuration.h`.
 
