@@ -34,7 +34,7 @@
 // 0 ... no heated bed
 // 1 ... aluminium heated bed with "BuildTak-like" sticker
 // 2 ... ultrabase heated bed
-#define ANYCUBIC_KOSSEL_ENABLE_BED 1
+#define ANYCUBIC_KOSSEL_ENABLE_BED 2
 
 /**
  * Configuration.h
@@ -682,11 +682,9 @@
     #define DELTA_PRINTABLE_RADIUS 120.0  // (mm)
     
     // Center-to-center distance of the holes in the diagonal push rods.
-    //#define DELTA_DIAGONAL_ROD 267.0        // (mm)
     #define DELTA_DIAGONAL_ROD 269.0        // (mm)
     
     // Horizontal offset from middle of printer to smooth rod center.
-    //#define DELTA_SMOOTH_ROD_OFFSET 186.0   // (mm)
     #define DELTA_SMOOTH_ROD_OFFSET 188.0   // (mm)
     
     // Horizontal offset of the universal joints on the end effector.
