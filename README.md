@@ -15,7 +15,7 @@ These configurations activate many of the new advanced features of the Marlin fi
  * Progress Bar support for 2004 and 12864 LCD
  * Pause & Filament Change
 
-...and Games! (klick below)
+...and Games! (click below)
 
 [![Games on Anycubic Kossel Plus](https://img.youtube.com/vi/zc9mY9pi9JI/0.jpg)](https://www.youtube.com/watch?v=zc9mY9pi9JI)
 
