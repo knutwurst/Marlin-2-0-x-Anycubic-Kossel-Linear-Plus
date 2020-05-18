@@ -25,9 +25,9 @@ These configurations activate many of the new advanced features of the Marlin fi
 
 Then you should execute `Configuration > Delta Calibration > Set Delta Height` and also run `Configuration > Delta Configuration > Probe Z-offset` to verify the Probe offset.
 
-After that you should connect the Z-Probe and start `Configuration > Delta Calibration > Auto Calibration`. When it's done don't forget to also do `Configuration > Delta Calibration > Store Settings` to make it permanent.
+After that you should connect the Z-Probe and start `Configuration > Delta Calibration > Auto Calibration`. The Settings are automatically stored inside your EEPROM.
 
-You should also do a `Motion > Bed Leveling > Level bed` followed by `Store Settings` to ensure a perfect leveling.
+You should also do a `Motion > Unified Bed Leveling > Step by Step bed leveling` followed by `Store Settings` to ensure a perfect leveling.
 
 Please do a manual paper test (moving the nozzle slowly down to Z0 and checking with a piece of paper). If it's not perfect, use `Configuration > Advanced Settings > Probe Z Offset` to correct the difference and execute the calibration again.
 
@@ -54,7 +54,7 @@ Typically the probes for the Anycubic Delta Kossel printers come in two differen
 
     ![Version 2 Probe](images/Version2Probe.jpg)
 
-If you select the `ANYCUBIC_PROBE_VERSION 0`: It's very important to follow the correct procedure to set it up after flashing the firmware, otherwise you might damage the printer by ramming the nozzle into the buildplate:
+If you select the `ANYCUBIC_PROBE_VERSION 0`: It's very important to follow the correct procedure to set it up after flashing the firmware, otherwise you might damage the printer by ramming the nozzle into the heatbed:
 
 * `Configuration > Advanced Settings > Initialize EEPROM`
 * `Motion > Move Axis > Soft Endstops` : `Off`
