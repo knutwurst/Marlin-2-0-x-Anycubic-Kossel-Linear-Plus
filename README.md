@@ -12,7 +12,7 @@ These configurations activate many of the new advanced features of the Marlin fi
  * Unified Bed Leveling (UBL)
  * Manual Mesh Edit via LCD
  * Full LCD 12864 Full Graphic Smart Controller Support
- * Progress Bar support fpr 2004 and 12864 LCD
+ * Progress Bar support for 2004 and 12864 LCD
  * 3 builtin Games (Brickout, Invaders and Snake)
  * Pause & Filament Change
 
