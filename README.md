@@ -23,7 +23,7 @@ These configurations activate many of the new advanced features of the Marlin fi
 
 **Important**: Before doing anything else after updating the firmware, go to `Configuration > Advanced Settings > Initialize EEPROM` to get rid of old configurations.
 
-Then you should execute `Configuration > Delta Calibration > Set Delta Height` and also run `Configuration > Delta Configuration > Probe Z-offset` to verify the Probe offset.
+Then you should execute `Configuration > Delta Configuration > Probe Z-offset` to verify the Probe offset.
 
 After that you should connect the Z-Probe and start `Configuration > Delta Calibration > Auto Calibration`. The Settings are automatically stored inside your EEPROM.
 
@@ -50,7 +50,7 @@ Typically the probes for the Anycubic Delta Kossel printers come in two differen
 
     ![Version 1 Probe](images/Version1Probe.jpg)
 
-  * Version 2: Z Probe Offset of -16.8mm
+  * Version 2: Z Probe Offset of -16.2mm
 
     ![Version 2 Probe](images/Version2Probe.jpg)
 
@@ -62,7 +62,7 @@ If you select the `ANYCUBIC_PROBE_VERSION 0`: It's very important to follow the 
 * Subtract this number from the value in `Configuration > Delta Calibration > Delta Settings > Height`. (If it's negative, add it).
 * Save and try the paper test again to verify your height.
 * `Configuration > Store Settings`
-* `Motion > Unified Bed Leveling (UBL) > Step By Step Bed Leveling`
+* `Motion > Unified Bed Leveling (UBL) > Manual Mesh Bed Leveling`
 
 # Download
 
