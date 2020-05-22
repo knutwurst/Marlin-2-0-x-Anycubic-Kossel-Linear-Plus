@@ -1134,7 +1134,7 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define MIN_PROBE_EDGE 10
+#define MIN_PROBE_EDGE 30
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 1000
@@ -2087,10 +2087,9 @@
 //
 
 #define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
-#define ST7920_DELAY_1 DELAY_NS(0)
-#define ST7920_DELAY_2 DELAY_NS(200)
+#define ST7920_DELAY_1 DELAY_NS(200)
+#define ST7920_DELAY_2 DELAY_NS(250)
 #define ST7920_DELAY_3 DELAY_NS(63) // this is the default value for a 16mhz processor (ie a mega2560)
-
 
 //
 // ReprapWorld Graphical LCD
