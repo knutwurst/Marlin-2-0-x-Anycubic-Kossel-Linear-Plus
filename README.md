@@ -17,7 +17,8 @@ Diese Firmwarekonfiguration aktiviert viele neue erweitere Funktionen der Marlin
 
 [![Games on Anycubic Kossel Plus](https://img.youtube.com/vi/zc9mY9pi9JI/0.jpg)](https://www.youtube.com/watch?v=zc9mY9pi9JI)
 
-**Anmerkung** Wenn du das alte "2004" Display benutzen willst, welches bei dem Drucker mitgeliefert wurde, kommentiere einfach die Zeile `#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER` aus und die Zeile `#define REPRAP_DISCOUNT_SMART_CONTROLLER` in der Datei `configuration.h` ein.
+**Anmerkung:**
+Wenn du das alte "2004" Display benutzen willst, welches bei dem Drucker mitgeliefert wurde, kommentiere einfach die Zeile `#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER` aus und die Zeile `#define REPRAP_DISCOUNT_SMART_CONTROLLER` in der Datei `configuration.h` ein.
 
 Bevor du irgendwas machst, nachdem du die Firmware geupdated hast, gehe zu `Configuration > Advanced Settings > Initialize EEPROM` um alte Einstellungen zu löschen!
 
