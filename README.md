@@ -30,7 +30,7 @@ Du solltest danach `Motion > Unified Bed Leveling > Step by Step bed leveling` a
 
 Bitte teste mit einem Blatt Papier noch einmal die Z0 Höhe. Die Düse sollte bei Z=0.000 fast auf dem Druckbett aufliegen. Falls nicht, stelle die Z-Sensor Höhe noch einmal ganz genau ein und ändere den Wert unter `Configuration > Advanced Settings > Probe Z Offset`.
 
-**Anleitung: Korreten Z-Probe Offset bestimmen**
+**Anleitung: Korrekten Z-Probe Offset bestimmen**
 
 1. Lege ein Blatt Papier auf das Druckbett.
 2. Fahre die Düse auf das Bett, so dass das Blatt sich gerade so eben noch bewegt, aber schwergängig ist. Falls du selbst bei 0.00 noch Luft zwischen Düse und dem Blatt Papier hast, gehe zurück und deaktiviere die "Soft Endstops". Die Einstellung ist aber gefährlich, da du jetzt auch weiter als eigentlich möglich runter fahren kannst und damit die Düse beschädigen kannst. Also sei vorsichtig!
