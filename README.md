@@ -1,3 +1,94 @@
+# Readme (German, english below!)
+
+# Current Marlin Version: 2.0.5.3
+
+
+# Readme
+
+# Current Marlin Version: 2.0.5.3
+
+![Kossel Plus with 12864 LCD](images/kosselplus_lcd_full.jpg)
+
+Diese Firmearekonfiguration aktiviert viele neue erweitere Funktionen der Marlin Firmware:
+
+ * Automatische Kalibrierung
+ * S-Kurben Beschleunigung
+ * Babystepping während des Druckvorgangs (Doppelklick mit dem Kontrollknopf)
+ * Unified Bed Leveling (UBL)
+ * Manuelles Editieren der Messpunkte über das Display
+ * Volle LCD 12864 Full Graphic Smart Controller Unterstützung
+ * Fortschrittsbalken für 2004 und 12864 Displays
+ * Pause & Filamentwechselfunktion
+
+...Und Spiele! (unten klicken)
+
+[![Games on Anycubic Kossel Plus](https://img.youtube.com/vi/zc9mY9pi9JI/0.jpg)](https://www.youtube.com/watch?v=zc9mY9pi9JI)
+
+**Anmerkung** Wenn du das alte "2004" Display benutzen willst, welches bei dem Drucker mitgeliefert wurde, kommentiere einfach die Zeile `#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER` aus und die Zeile `#define REPRAP_DISCOUNT_SMART_CONTROLLER` in der Datei `configuration.h` ein.
+
+Bevor du irgendwas machst, nachdem du die Firmware geupdated hast, gehe zu `Configuration > Advanced Settings > Initialize EEPROM` um alte Einstellungen zu löschen!
+
+Danach gehst du zu `Configuration > Delta Configuration > Probe Z-offset` um die zusätzliche Hohe des Z-Sensors zu überprüfen.
+
+Nachdem alles überbrüft ist, gehst du zu `Configuration > Delta Calibration > Auto Calibration` um die automatische Kalibrierung auszuführen. Die Einstellungen werden automatisch gespeichert. 
+
+Du solltest danach `Motion > Unified Bed Leveling > Step by Step bed leveling` ausführen und mit `Store Settings` abspeichern.
+
+Bitte teste mit einem Blatt Papier noch einmal die Z0 Höhe. Die Düse sollte bei Z=0.000 fast auf dem Druckbett aufliegen. Falls nicht, stelle die Z-Sensor Höhe noch einmal ganz genau ein und ändere den Wert unter `Configuration > Advanced Settings > Probe Z Offset`.
+
+**WARNUNG! Ändere niemals die Delta-Höhe in den Einstellungen!**
+
+Auf Youtube kursieren einige Videos, in denen gezeigt wird, wie man mit Marlin 1.1.9 den Kossel levelt. Dies ist aber völlig veraltet und trifft nicht mehr auf diese Firmware zu! Im Grunde war es nur der Versuch, das nicht funktionierende Leveling und den falschen Z-Senstor Abstand zu kompensieren - aber es war niemals richtig. Also tue dir selbst einen Gefallen und spiele nicht an den errechneten Werten in der Delta-Konfiguration herum. Alles was du brauchst ist ein perfekter Z-Offset (zusätzliche Z-Höhe des Sensors), der dann erreicht ist, wenn du das leise Klicken hörst. UBL erledigt den Rest und du musst nie wieder mit Papier leveln oder Werte selbst errechnen.
+
+
+# Wähle deine Konfiguration
+
+**Bitte wähle die korrekten Einstellungen in dere Configuration.h Datei**
+
+Der Kossel wird in 3 Versionen geliefert:
+
+ * Pulley
+ * Linear
+ * Linear Plus
+
+Pulley und Linear nutzen die selbe Konfiguration, aber der Linear Plus ist größer und benutzt andere Einstellungen.
+
+Im Normalfall kommen die Anycubic Delta Kossel Drucker mit zwei verschiedenen Z-Sensor Versionen:
+
+  * Version 1: Z Probe Offset von -19.0mm
+
+    ![Version 1 Probe](images/Version1Probe.jpg)
+
+  * Version 2: Z Probe Offset von -16.2mm
+
+    ![Version 2 Probe](images/Version2Probe.jpg)
+
+Wenn du in der Konfiguration `ANYCUBIC_PROBE_VERSION 0` ausgewählt hast: Es ist extrem wichtig, dass du die korrekte Prozedur zum Leveln durchführst, nachdem du die Firmware geflashed hast. Andernfalls kann es passieren, dass du deinen Drucker beschädigst, indem du die Düse in das Heizbett rammst.
+
+* `Configuration > Advanced Settings > Initialize EEPROM`
+* `Motion > Move Axis > Soft Endstops` : `Off`
+* `Auto Home` Und dann langsam(!) runterfahren, bis die Düse ganz leicht das Bett berührt. (Benutze ein stück Papier. Wenn man einen Widerstand beim Verschieben spürt, ist es richtig) und notiere dir diese Zahl auf dem Display.
+* Ziehe diese Nummer von der Delta-Höhe ab, bzw addiere sie zu dem Wert unter `Configuration > Delta Calibration > Delta Settings > Height`.
+* Speichere und mache den Papier-Test noch mal. Bei Z=0.000 sollte nun die Düse genau das Papier berühren.
+* `Configuration > Store Settings`
+* `Motion > Unified Bed Leveling (UBL) > Manual Mesh Bed Leveling`
+
+# Download
+
+Du kannst die fertigen Binärdateien hier herunterladen: https://github.com/knutwurst/Marlin-2-0-x-Anycubic-Kossel-Linear-Plus/releases. Natürlich kannst du die Firmware auch selbst mit PlatformIO oder der Arduino IDE selbst kompilieren.
+
+-> `Kossel_Plus_2053.hex` ist für den unmodifizierten originalen Anycubic Kossel Linear Plus.
+
+-> `Kossel_Plus_2053_TMC.hex` hat Optimierungen und invertierte Ausgänge für TMC2100 and TMC2208 Motortreiber.
+
+-> `Kossel_Plus_2053_Graphic_LCD.hex` wird verwendet, wenn du das Display vom einem alten 2004-Style zu einem
+12864 Full Graphic Smart Controller getauscht hast.
+
+-> `Kossel_Plus_2053_TMC_Graphic_LCD.hex` benutzt du, wenn du alles gemacht hast. Neues 12864 Full Graphic Smart Controller Display und leise TMC Motortreiber.
+
+
+
+
 # Readme
 
 # Current Marlin Version: 2.0.5.3
