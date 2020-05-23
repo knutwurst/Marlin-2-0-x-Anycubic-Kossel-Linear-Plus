@@ -1,11 +1,4 @@
-# Readme (German, english below!)
-
-# Current Marlin Version: 2.0.5.3
-
-
-# Readme
-
-# Current Marlin Version: 2.0.5.3
+# Readme - German (english below)
 
 ![Kossel Plus with 12864 LCD](images/kosselplus_lcd_full.jpg)
 
@@ -89,9 +82,7 @@ Du kannst die fertigen Binärdateien hier herunterladen: https://github.com/knut
 
 
 
-# Readme
-
-# Current Marlin Version: 2.0.5.3
+# Readme - English
 
 ![Kossel Plus with 12864 LCD](images/kosselplus_lcd_full.jpg)
 
