@@ -2,14 +2,14 @@
 
 ![Kossel Plus with 12864 LCD](images/kosselplus_lcd_full.jpg)
 
-Diese Firmearekonfiguration aktiviert viele neue erweitere Funktionen der Marlin Firmware:
+Diese Firmwarekonfiguration aktiviert viele neue erweitere Funktionen der Marlin Firmware:
 
  * Automatische Kalibrierung
- * S-Kurben Beschleunigung
+ * S-Kurven Beschleunigung
  * Babystepping während des Druckvorgangs (Doppelklick mit dem Kontrollknopf)
  * Unified Bed Leveling (UBL)
  * Manuelles Editieren der Messpunkte über das Display
- * Volle LCD 12864 Full Graphic Smart Controller Unterstützung
+ * Volle LCD 12864 Unterstützung
  * Fortschrittsbalken für 2004 und 12864 Displays
  * Pause & Filamentwechselfunktion
 
