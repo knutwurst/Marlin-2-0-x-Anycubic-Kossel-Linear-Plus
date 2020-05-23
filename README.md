@@ -23,11 +23,23 @@ Bevor du irgendwas machst, nachdem du die Firmware geupdated hast, gehe zu `Conf
 
 Danach gehst du zu `Configuration > Delta Configuration > Probe Z-offset` um die zusätzliche Hohe des Z-Sensors zu überprüfen.
 
-Nachdem alles überbrüft ist, gehst du zu `Configuration > Delta Calibration > Auto Calibration` um die automatische Kalibrierung auszuführen. Die Einstellungen werden automatisch gespeichert. 
+Nachdem alles überprüft ist, gehst du zu `Configuration > Delta Calibration > Auto Calibration` um die automatische Kalibrierung auszuführen. Die Einstellungen werden automatisch gespeichert. 
 
 Du solltest danach `Motion > Unified Bed Leveling > Step by Step bed leveling` ausführen und mit `Store Settings` abspeichern.
 
 Bitte teste mit einem Blatt Papier noch einmal die Z0 Höhe. Die Düse sollte bei Z=0.000 fast auf dem Druckbett aufliegen. Falls nicht, stelle die Z-Sensor Höhe noch einmal ganz genau ein und ändere den Wert unter `Configuration > Advanced Settings > Probe Z Offset`.
+
+**Anleitung: Korreten Z-Probe Offset bestimmen**
+
+1. Lege ein Blatt Papier auf das Druckbett.
+2. Fahre die Düse auf das Bett, so dass das Blatt sich gerade so eben noch bewegt, aber schwergängig ist. Falls du selbst bei 0.00 noch Luft zwischen Düse und dem Blatt Papier hast, gehe zurück und deaktiviere die "Soft Endstops". Die Einstellung ist aber gefährlich, da du jetzt auch weiter als eigentlich möglich runter fahren kannst und damit die Düse beschädigen kannst. Also sei vorsichtig!
+3. Notiere dir den Wert im Display. (z.B. +2.00)
+3. Fahre die Z-Achse etwas hoch und klemm die Probe drunter.
+4. Fahre langsam wieder runter (in 0,01mm Schritten) und zwar genau bis du das Klick hörst. Nicht weiter!
+5. Notiere dir den neuen Wert im Display. (z.B. 16.40)
+5. Ziehe den Wert von Punkt 5 von dem Wert von Punkt 3 ab. -> 2.00 - 16-40 = -16,20 
+6. Trage den errechneten Wert als Z-Probe Offset ein.
+Wenn der Offset NICHT dem entspricht, was aktuell eingetragen ist (Standard ist -16,20), dann MUSST du die Autokalibrierung danach noch mal ausführen.
 
 **WARNUNG! Ändere niemals die Delta-Höhe in den Einstellungen!**
 
