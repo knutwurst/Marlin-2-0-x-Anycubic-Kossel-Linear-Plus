@@ -1383,7 +1383,7 @@
 #else
 //#define AUTO_BED_LEVELING_LINEAR
 //#define AUTO_BED_LEVELING_BILINEAR
-  #define AUTO_BED_LEVELING_UBL // Olli
+  #define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 #endif
 
@@ -1677,7 +1677,7 @@
 
 #if ENABLED(NOZZLE_PARK_FEATURE)
   // Specify a park position as { X, Y, Z_raise }
-  #define NOZZLE_PARK_POINT { 0, 0, 20 }
+  #define NOZZLE_PARK_POINT { 0, 0, 50 }
   #define NOZZLE_PARK_XY_FEEDRATE 100   // (mm/s) X and Y axes feedrate (also used for delta Z axis)
   #define NOZZLE_PARK_Z_FEEDRATE 100    // (mm/s) Z axis feedrate (not used for delta printers)
 #endif
@@ -1869,7 +1869,7 @@
 // This option overrides the default number of encoder pulses needed to
 // produce one step. Should be increased for high-resolution encoders.
 //
-#define ENCODER_PULSES_PER_STEP 3
+#define ENCODER_PULSES_PER_STEP 4
 
 //
 // Use this option to override the number of step signals required to
