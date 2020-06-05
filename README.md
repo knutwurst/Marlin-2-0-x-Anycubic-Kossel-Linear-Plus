@@ -82,7 +82,7 @@ Wenn du in der Konfiguration `ANYCUBIC_PROBE_VERSION 0` ausgewählt hast: Es ist
 
 # Download
 
-Du kannst die fertigen Binärdateien hier herunterladen: https://github.com/knutwurst/Marlin-2-0-x-Anycubic-Kossel-Linear-Plus/releases. Natürlich kannst du die Firmware auch selbst mit PlatformIO oder der Arduino IDE selbst kompilieren.
+Du kannst die fertigen Binärdateien hier herunterladen: https://github.com/knutwurst/Marlin-2-0-x-Anycubic-Kossel-Linear-Plus/releases. Natürlich kannst du die Firmware mit PlatformIO oder der Arduino IDE auch selbst kompilieren.
 
 -> `Kossel_Plus_2053.hex` ist für den unmodifizierten originalen Anycubic Kossel Linear Plus.
 
