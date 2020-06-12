@@ -18,30 +18,26 @@ Diese Firmwarekonfiguration aktiviert viele neue erweitere Funktionen der Marlin
 
 [![Games on Anycubic Kossel Plus](https://img.youtube.com/vi/zc9mY9pi9JI/0.jpg)](https://www.youtube.com/watch?v=zc9mY9pi9JI)
 
-**Anmerkung:**
-Wenn du das alte "2004" Display benutzen willst, welches bei dem Drucker mitgeliefert wurde, kommentiere einfach die Zeile `#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER` aus und die Zeile `#define REPRAP_DISCOUNT_SMART_CONTROLLER` in der Datei `configuration.h` ein.
-
+**Wichtig:**
 Bevor du irgendwas machst, nachdem du die Firmware geupdated hast, gehe zu `Configuration > Advanced Settings > Initialize EEPROM` um alte Einstellungen zu löschen!
 
-Danach gehst du zu `Configuration > Delta Configuration > Probe Z-offset` um die zusätzliche Hohe des Z-Sensors zu überprüfen.
-
-Nachdem alles überprüft ist, gehst du zu `Configuration > Delta Calibration > Auto Calibration` um die automatische Kalibrierung auszuführen. Die Einstellungen werden automatisch gespeichert. 
-
-Du solltest danach `Motion > Unified Bed Leveling > Step by Step bed leveling` ausführen und mit `Store Settings` abspeichern.
-
-Bitte teste mit einem Blatt Papier noch einmal die Z0 Höhe. Die Düse sollte bei Z=0.000 fast auf dem Druckbett aufliegen. Falls nicht, stelle die Z-Sensor Höhe noch einmal ganz genau ein und ändere den Wert unter `Configuration > Advanced Settings > Probe Z Offset`.
+Bitte teste mit einem Blatt Papier die Z-Höhe. Die Düse sollte bei Z=0.00 fast auf dem Druckbett aufliegen. Falls nicht, stelle die Z-Sensor Höhe noch einmal ganz genau ein und ändere den Wert unter `Configuration > Advanced Settings > Probe Z Offset`.
 
 **Anleitung: Korrekten Z-Probe Offset bestimmen**
 
 1. Lege ein Blatt Papier auf das Druckbett.
 2. Fahre die Düse auf das Bett, so dass das Blatt sich gerade so eben noch bewegt, aber schwergängig ist. Falls du selbst bei 0.00 noch Luft zwischen Düse und dem Blatt Papier hast, gehe zurück und deaktiviere die "Soft Endstops". Die Einstellung ist aber gefährlich, da du jetzt auch weiter als eigentlich möglich runter fahren kannst und damit die Düse beschädigen kannst. Also sei vorsichtig!
-3. Notiere dir den Wert im Display. (z.B. +2.00)
+3. Notiere dir den Wert im Display. (z.B. +0.20)
 3. Fahre die Z-Achse etwas hoch und klemm die Probe drunter.
 4. Fahre langsam wieder runter (in 0,01mm Schritten) und zwar genau bis du das Klicken hörst. Nicht weiter!
 5. Notiere dir den neuen Wert im Display. (z.B. +16.40)
-5. Ziehe den Wert von Punkt 5 von dem Wert von Punkt 3 ab. -> 2.00 - 16-40 = -16,20 
+5. Ziehe den Wert von Punkt 5 von dem Wert von Punkt 3 ab. -> 0.20 - 16.40 = -16,20 
 6. Trage den errechneten Wert als Z-Probe Offset ein.
 Wenn der Offset NICHT dem entspricht, was aktuell eingetragen ist (Standard ist -16,20), dann MUSST du die Autokalibrierung danach noch mal ausführen.
+
+Nachdem alles überprüft ist, gehst du zu `Configuration > Delta Calibration > Auto Calibration` um die automatische Kalibrierung auszuführen. Die Einstellungen werden automatisch gespeichert. 
+
+Du solltest danach `Motion > Unified Bed Leveling > Step by Step bed leveling` ausführen und mit `Store Settings` abspeichern.
 
 **WARNUNG! Ändere niemals die Delta-Höhe in den Einstellungen!**
 
@@ -115,29 +111,25 @@ These configurations activate many of the new advanced features of the Marlin fi
 
 [![Games on Anycubic Kossel Plus](https://img.youtube.com/vi/zc9mY9pi9JI/0.jpg)](https://www.youtube.com/watch?v=zc9mY9pi9JI)
 
-**Note** If you want to use the old 2004-Style LCD, which comes with the printer out of the box, just comment `#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER` out and uncomment `#define REPRAP_DISCOUNT_SMART_CONTROLLER` in `configuration.h`.
-
 **Important**: Before doing anything else after updating the firmware, go to `Configuration > Advanced Settings > Initialize EEPROM` to get rid of old configurations.
 
-Then you should execute `Configuration > Delta Configuration > Probe Z-offset` to verify the Probe offset.
-
-After that you should connect the Z-Probe and start `Configuration > Delta Calibration > Auto Calibration`. The Settings are automatically stored inside your EEPROM.
-
-You should also do a `Motion > Unified Bed Leveling > Step by Step bed leveling` followed by `Store Settings` to ensure a perfect leveling.
-
-Please do a manual paper test (moving the nozzle slowly down to Z0 and checking with a piece of paper). If it's not perfect, use `Configuration > Advanced Settings > Probe Z Offset` to correct the difference and execute the calibration again.
+Please test the Z-height with a sheet of paper. At Z = 0.00 the nozzle should almost rest on the print bed. If not, set the Z-probe height again and change the value under `Configuration> Advanced Settings> Probe Z Offset`.
 
 **Tutorial: Get the correct z probe offset**
 
 1. Pace a sheet of paper on the heated bed.
 2. Slide the nozzle onto the bed so that the sheet is just about to move. If you still have a gap between the nozzle and the sheet of paper even at 0.00, go back and deactivate the "Soft Endstops". The setting is dangerous however, because you can now go further down than actually possible and thus damage the nozzle and the bed. So be careful!
-3. Write down the value on the display. (e.g. +2.00)
+3. Write down the value on the display. (e.g. +0.20)
 3. Run the Z-axis up a little and clamp the probe underneath.
 4. Slowly drive back down (in 0.01mm steps) until you hear the click. Do not go further!
 5. Write down the value on the display. (e.g. +16.40)
-5. Subtract the value of point 5 from the value of point 3. -> 2.00 - 16-40 = -16.20
+5. Subtract the value of point 5 from the value of point 3. -> 0.20 - 16.40 = -16.20
 6. Enter the calculated value as a Z probe offset.
 If the offset does NOT correspond to what the current default value is (-16.20), you MUST perform the auto calibration again afterwards.
+
+After everything is checked, go to `Configuration> Delta Calibration> Auto Calibration` to perform the automatic calibration. The settings are saved automatically.
+
+You should then execute `Motion> Unified Bed Leveling> Step by Step bed leveling` and save it with` Store Settings`.
 
 **WARNING! DO NOT EDIT THE DELTA HEIGHT!**
 
