@@ -916,7 +916,7 @@
  * When changing speed and direction, if the difference is less than the
  * value set here, it may happen instantaneously.
  */
-//#define CLASSIC_JERK
+#define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
   #define DEFAULT_XJERK  5.0
   #define DEFAULT_YJERK  DEFAULT_XJERK
@@ -940,9 +940,6 @@
  *   http://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html
  */
 #if DISABLED(CLASSIC_JERK)
-  // This might be too low, but assuming the default acceleration of 3000mm/s,
-  // this is what we need to get the best out of the printer when looking
-  // at the quality. ->  0.4*5*5/3000 = 0.003 
   #define JUNCTION_DEVIATION_MM 0.003 // (mm) Distance from real junction edge
 #endif
 
