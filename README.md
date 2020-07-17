@@ -1,4 +1,4 @@
-# Knutwurst's Kossel Plus Firmware (based on Marlin 2.0.5.3)
+# Knutwurst's Kossel Plus Firmware (based on Marlin 2.0.5.4)
 # Readme - German (english below)
 
 ![Kossel Plus with 12864 LCD](images/kosselplus_lcd_full.jpg)
