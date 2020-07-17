@@ -1,4 +1,7 @@
 # Knutwurst's Kossel Plus Firmware (based on Marlin 2.0.5.4)
+
+### If you like what I do you can buy me a coffee: [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/oliverkoester)
+
 # Readme - German (english below)
 
 ![Kossel Plus with 12864 LCD](images/kosselplus_lcd_full.jpg)
