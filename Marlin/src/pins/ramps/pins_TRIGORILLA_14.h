@@ -80,7 +80,7 @@
 
 #define CONTROLLER_FAN_PIN           TG_FAN1_PIN
 
-#define BEEPER_PIN                            31
+//#define BEEPER_PIN                            31
 #define SD_DETECT_PIN                         49
 
 // Remap MOSFET pins to common usages:
