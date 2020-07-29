@@ -41,7 +41,7 @@
  *  Other pins_MYBOARD.h files may override these defaults
  *
  *  Differences between
- *  RAMPS_13 | RAMPS_14CONTROLLER_FAN_PIN
+ *  RAMPS_13 | RAMPS_14
  *         7 | 11
  */
 
