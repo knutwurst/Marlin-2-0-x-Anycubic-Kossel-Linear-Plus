@@ -22,8 +22,8 @@
 #pragma once
 
 
-#define KNUTWURST_GRAPHIC_LCD
-#define KNUTWURST_TMC
+//#define KNUTWURST_GRAPHIC_LCD
+//#define KNUTWURST_TMC
 
 /**
  * Choose your version:
