@@ -88,14 +88,14 @@ Wenn du in der Konfiguration `ANYCUBIC_PROBE_VERSION 0` ausgewählt hast: Es ist
 
 Du kannst die fertigen Binärdateien hier herunterladen: https://github.com/knutwurst/Marlin-2-0-x-Anycubic-Kossel-Linear-Plus/releases. Natürlich kannst du die Firmware mit PlatformIO oder der Arduino IDE auch selbst kompilieren.
 
--> `Kossel_Plus_2053.hex` ist für den unmodifizierten originalen Anycubic Kossel Linear Plus.
+-> `Kossel_Plus_XXXX.hex` ist für den unmodifizierten originalen Anycubic Kossel Linear Plus.
 
--> `Kossel_Plus_2053_TMC.hex` hat Optimierungen und invertierte Ausgänge für TMC2100 and TMC2208 Motortreiber.
+-> `Kossel_Plus_XXXX_TMC.hex` hat Optimierungen und invertierte Ausgänge für TMC2100 and TMC2208 Motortreiber.
 
--> `Kossel_Plus_2053_Graphic_LCD.hex` wird verwendet, wenn du das Display vom einem alten 2004-Style zu einem
+-> `Kossel_Plus_XXXX_Graphic_LCD.hex` wird verwendet, wenn du das Display vom einem alten 2004-Style zu einem
 12864 Full Graphic Smart Controller getauscht hast.
 
--> `Kossel_Plus_2053_TMC_Graphic_LCD.hex` benutzt du, wenn du alles gemacht hast. Neues 12864 Full Graphic Smart Controller Display und leise TMC Motortreiber.
+-> `Kossel_Plus_XXXX_TMC_Graphic_LCD.hex` benutzt du, wenn du alles gemacht hast. Neues 12864 Full Graphic Smart Controller Display und leise TMC Motortreiber.
 
 ---
 
@@ -184,11 +184,11 @@ If you select the `ANYCUBIC_PROBE_VERSION 0`: It's very important to follow the 
 
 You can download binary releases from the releases page, which can be found here: https://github.com/knutwurst/Marlin-2-0-x-Anycubic-Kossel-Linear-Plus/releases. Of course you can also build the firmware by yourself using PlatformIO or Arduino IDE.
 
--> `Kossel_Plus_2053.hex` is for the unmodified original Anycubic Kossel Linear Plus.
+-> `Kossel_Plus_XXXX.hex` is for the unmodified original Anycubic Kossel Linear Plus.
 
--> `Kossel_Plus_2053_TMC.hex` has optimisations and also inverted outputs for TMC2100 and TMC2208 Stepper drivers.
+-> `Kossel_Plus_XXXX_TMC.hex` has optimisations and also inverted outputs for TMC2100 and TMC2208 Stepper drivers.
 
--> `Kossel_Plus_2053_Graphic_LCD.hex` is used, when you changed your LCD from the original 2004-Style to a
+-> `Kossel_Plus_XXXX_Graphic_LCD.hex` is used, when you changed your LCD from the original 2004-Style to a
 12864 Full Graphic Smart Controller.
 
--> `Kossel_Plus_2053_TMC_Graphic_LCD.hex` is used if you have everything. New 12864 Full Graphic Smart Controller and also quiet TMC Stepper Drivers.
+-> `Kossel_Plus_XXXX_TMC_Graphic_LCD.hex` is used if you have everything. New 12864 Full Graphic Smart Controller and also quiet TMC Stepper Drivers.
