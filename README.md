@@ -1,4 +1,4 @@
-# Knutwurst's Kossel Plus Firmware (based on Marlin 2.0.5.4)
+# Knutwurst's Kossel Plus Firmware (based on Marlin 2.0.x)
 
 <span style="color: red;">(BITTE GENAU DURCHLESEN! / PLEASE READ CAREFULLY!)</span>
 
@@ -88,14 +88,18 @@ Wenn du in der Konfiguration `ANYCUBIC_PROBE_VERSION 0` ausgewählt hast: Es ist
 
 Du kannst die fertigen Binärdateien hier herunterladen: https://github.com/knutwurst/Marlin-2-0-x-Anycubic-Kossel-Linear-Plus/releases. Natürlich kannst du die Firmware mit PlatformIO oder der Arduino IDE auch selbst kompilieren.
 
--> `Kossel_Plus_XXXX.hex` ist für den unmodifizierten originalen Anycubic Kossel Linear Plus.
+Um es übersichtlich zu gestalten, beinhalten die Dateinamen die einzelnen Features.
 
--> `Kossel_Plus_XXXX_TMC.hex` hat Optimierungen und invertierte Ausgänge für TMC2100 and TMC2208 Motortreiber.
+`_PLUS` steht für den Kossel Linear Plus mit 240mm  Ultrabase.
 
--> `Kossel_Plus_XXXX_Graphic_LCD.hex` wird verwendet, wenn du das Display vom einem alten 2004-Style zu einem
-12864 Full Graphic Smart Controller getauscht hast.
+`_12864` steht für das Vollgrafikdisplay mit 128x64 Pixeln.
 
--> `Kossel_Plus_XXXX_TMC_Graphic_LCD.hex` benutzt du, wenn du alles gemacht hast. Neues 12864 Full Graphic Smart Controller Display und leise TMC Motortreiber.
+`_TMC` steht für Trinamic TMC Motortreiber. Hierbei wird auch die Drehrichtung der Motoren invertiert.
+
+`_BLTOUCH` steht für die BL-Touch Version mit Autoleveling-Sensor.
+
+
+Für (fast) jede Kombination gibt es eine passende Firmware im Download-Bereich. ;)
 
 ---
 
@@ -184,11 +188,12 @@ If you select the `ANYCUBIC_PROBE_VERSION 0`: It's very important to follow the 
 
 You can download binary releases from the releases page, which can be found here: https://github.com/knutwurst/Marlin-2-0-x-Anycubic-Kossel-Linear-Plus/releases. Of course you can also build the firmware by yourself using PlatformIO or Arduino IDE.
 
--> `Kossel_Plus_XXXX.hex` is for the unmodified original Anycubic Kossel Linear Plus.
+In order to make it clear, the file names contain the individual features.
 
--> `Kossel_Plus_XXXX_TMC.hex` has optimisations and also inverted outputs for TMC2100 and TMC2208 Stepper drivers.
+`_PLUS` stands for the Kossel Linear Plus with 240mm Ultrabase.
 
--> `Kossel_Plus_XXXX_Graphic_LCD.hex` is used, when you changed your LCD from the original 2004-Style to a
-12864 Full Graphic Smart Controller.
+`_12864` stands for the full graphic display with 128x64 pixels.
 
--> `Kossel_Plus_XXXX_TMC_Graphic_LCD.hex` is used if you have everything. New 12864 Full Graphic Smart Controller and also quiet TMC Stepper Drivers.
+`_TMC` stands for Trinamic TMC motor driver. The direction of rotation of the motors is also inverted.
+
+`_BLTOUCH` stands for the BL-Touch version with autoleveling sensor.
