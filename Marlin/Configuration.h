@@ -21,15 +21,29 @@
  */
 #pragma once
 
+/*******************************************************************************************
+ **                                                                                       **
+ **                                                                                       **
+ **   WARNING:                                                                            **
+ **   THE FOLLOWING SETTINGS ARE NORMALLY SET BY PLATFORMIO!                              **
+ **                                                                                       **
+ **   IF YOU CHANGE THEM WITHIN THE SOURCECODE, DO NOT COMMIT                             **
+ **   TO MASTER BRANCH OR BUILD WITH PLATFORMIO ENVIRONMENT!                              **
+ **   OTHERWISE SOME SETTINGS MIGHT BE OVERWRITTEN AND YOU END                            **
+ **   UP WITH A NON FUNCTIONING FIRMWARE!                                                 **
+ **                                                                                       **
+ **   If you want to select a specific configuration for your                             **
+ **   printer, just open the PlatformIO tab on the left, select                           **
+ **   PROJECT TASKS and then "env:i3_MEGA*" (your desired config)                         **
+ **   From there you can build and upload your code.                                      **
+ **                                                                                       **
+ **                                                                                       **
+ *******************************************************************************************/
 
+//#define KNUTWURST_KOSSEL_PLUS
 //#define KNUTWURST_GRAPHIC_LCD
 //#define KNUTWURST_TMC
-
-/**
- * Choose your version:
- */
-// normal size or plus?
-#define ANYCUBIC_KOSSEL_PLUS
+//#define KNUTWURST_BLTOUCH
 
 // Anycubic Probe version 1 or 2 see README.md; 0 for no probe
 #define ANYCUBIC_PROBE_VERSION 2
@@ -38,7 +52,11 @@
 // 0 ... no heated bed
 // 1 ... aluminium heated bed with "BuildTak-like" sticker
 // 2 ... ultrabase heated bed
-#define ANYCUBIC_KOSSEL_ENABLE_BED 2
+#if ENABLED(KNUTWURST_KOSSEL_PLUS)
+   #define KNUTWURST_KOSSEL_ENABLE_BED 2
+#else
+   #define KNUTWURST_KOSSEL_ENABLE_BED 0
+#endif
 
 /**
  * Configuration.h
@@ -431,7 +449,7 @@
 #define TEMP_SENSOR_3 0
 #define TEMP_SENSOR_4 0
 #define TEMP_SENSOR_5 0
-#if ANYCUBIC_KOSSEL_ENABLE_BED > 0
+#if KNUTWURST_KOSSEL_ENABLE_BED > 0
    #define TEMP_SENSOR_BED 5
 #else
   #define TEMP_SENSOR_BED 0
@@ -547,7 +565,7 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-#if ANYCUBIC_KOSSEL_ENABLE_BED > 0
+#if KNUTWURST_KOSSEL_ENABLE_BED > 0
   #define PIDTEMPBED
 #endif
 //#define BED_LIMIT_SWITCHING
@@ -565,11 +583,11 @@
   // Anycubic Kossel
   // this is for the aluminium bed with a BuildTak-like sticker on it
   // from pid autotune. "M303 E-1 C8 S60" to run autotune on the bed at 60 degreesC for 8 cycles
-  #if ANYCUBIC_KOSSEL_ENABLE_BED == 1
+  #if KNUTWURST_KOSSEL_ENABLE_BED == 1
     #define DEFAULT_bedKp 374.03
     #define DEFAULT_bedKi 72.47
     #define DEFAULT_bedKd 482.59
-  #elif ANYCUBIC_KOSSEL_ENABLE_BED == 2
+  #elif KNUTWURST_KOSSEL_ENABLE_BED == 2
     //Anycubic 160W Ultrabase
     #define DEFAULT_bedKp 251.78
     #define DEFAULT_bedKi 49.57
@@ -636,7 +654,11 @@
  */
 
 #define THERMAL_PROTECTION_HOTENDS // Enable thermal protection for all extruders
-#define THERMAL_PROTECTION_BED     // Enable thermal protection for the heated bed
+
+#if KNUTWURST_KOSSEL_ENABLE_BED > 0
+    #define THERMAL_PROTECTION_BED     // Enable thermal protection for the heated bed
+#endif
+
 #define THERMAL_PROTECTION_CHAMBER // Enable thermal protection for the heated chamber
 
 //===========================================================================
@@ -692,7 +714,7 @@
     #define PROBE_MANUALLY_STEP 0.05      // (mm)
   #endif
 
-  #if ENABLED(ANYCUBIC_KOSSEL_PLUS)
+  #if ENABLED(KNUTWURST_KOSSEL_PLUS)
     // Print surface diameter/2 minus unreachable space (avoid collisions with vertical towers).
     #define DELTA_PRINTABLE_RADIUS 120.0  // (mm)
     
