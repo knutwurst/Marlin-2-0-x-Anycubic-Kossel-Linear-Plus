@@ -1038,8 +1038,10 @@
  *      - normally-open switches to 5V and D32.
  *
  */
+
+//Not sure which pin is used here.. maybe the default?
 #if ENABLED(KNUTWURST_BLTOUCH)
-    #define Z_MIN_PROBE_PIN 2 // Pin 32 is the RAMPS default
+    //#define Z_MIN_PROBE_PIN 2 // Pin 32 is the RAMPS default
 #endif
 
 /**
