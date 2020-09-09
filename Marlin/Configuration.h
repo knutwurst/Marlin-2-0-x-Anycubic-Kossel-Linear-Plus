@@ -45,8 +45,13 @@
 //#define KNUTWURST_TMC
 //#define KNUTWURST_BLTOUCH
 
-// Anycubic Probe version 1 or 2 see README.md; 0 for no probe
-#define ANYCUBIC_PROBE_VERSION 2
+
+#if ENABLED(KNUTWURST_BLTOUCH)
+    #define ANYCUBIC_PROBE_VERSION 0
+#else
+    // Anycubic Probe version 1 or 2 see README.md; 0 for no probe
+    #define ANYCUBIC_PROBE_VERSION 2
+#endif
 
 // Heated Bed:
 // 0 ... no heated bed
@@ -698,7 +703,7 @@
   #define DELTA_CALIBRATION_MENU
 
   // uncomment to add G33 Delta Auto-Calibration (Enable EEPROM_SETTINGS to store results)
-  #if ANYCUBIC_PROBE_VERSION > 0
+  #if ANYCUBIC_PROBE_VERSION > 0 || ENABLED(KNUTWURST_BLTOUCH)
     #define DELTA_AUTO_CALIBRATION
   #endif
 
@@ -768,7 +773,7 @@
 // extra connectors. Leave undefined any used for non-endstop and non-probe purposes.
 //#define USE_XMIN_PLUG
 //#define USE_YMIN_PLUG
-#if ANYCUBIC_PROBE_VERSION > 0
+#if ANYCUBIC_PROBE_VERSION > 0 || ENABLED(KNUTWURST_BLTOUCH)
   #define USE_ZMIN_PLUG // a Z probe
 #endif
 #define USE_XMAX_PLUG
@@ -1013,7 +1018,7 @@
  *
  * Enable this option for a probe connected to the Z Min endstop pin.
  */
-#if ANYCUBIC_PROBE_VERSION > 0
+#if ANYCUBIC_PROBE_VERSION > 0 || ENABLED(KNUTWURST_BLTOUCH)
   #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 #endif
 
@@ -1033,7 +1038,9 @@
  *      - normally-open switches to 5V and D32.
  *
  */
-//#define Z_MIN_PROBE_PIN 32 // Pin 32 is the RAMPS default
+#if ENABLED(KNUTWURST_BLTOUCH)
+    #define Z_MIN_PROBE_PIN 2 // Pin 32 is the RAMPS default
+#endif
 
 /**
  * Probe Type
@@ -1048,8 +1055,10 @@
  * or (with LCD_BED_LEVELING) the LCD controller.
  */
 #if ANYCUBIC_PROBE_VERSION == 0
-  #define PROBE_MANUALLY
-  #define MANUAL_PROBE_START_Z 1.5
+  #if DISABLED(KNUTWURST_BLTOUCH)
+      #define PROBE_MANUALLY
+      #define MANUAL_PROBE_START_Z 1.5
+  #endif
 #endif
 
 /**
@@ -1074,8 +1083,9 @@
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
-//#define BLTOUCH
-
+#if ENABLED(KNUTWURST_BLTOUCH)
+  #define BLTOUCH
+#endif
 /**
  * Touch-MI Probe by hotends.fr
  *
@@ -1170,12 +1180,15 @@
  * Specify a Probe position as { X, Y, Z }
  */
 #if ANYCUBIC_PROBE_VERSION == 2
-  //#define NOZZLE_TO_PROBE_OFFSET { 0, 0, -16.8 }
   #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -16.2 } //Offset for Probe until it clicks. So no need for paper leveling anymore!
 #elif ANYCUBIC_PROBE_VERSION == 1
   #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -19.0 }
 #else
-  #define NOZZLE_TO_PROBE_OFFSET { 0, 0, 0 }
+  #if ENABLED(KNUTWURST_BLTOUCH)
+      #define NOZZLE_TO_PROBE_OFFSET { 35, 10, 0 }
+  #else
+      #define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 }
+  #endif
 #endif
 
 // Most probes should stay away from the edges of the bed, but
@@ -1222,14 +1235,20 @@
 #define Z_CLEARANCE_MULTI_PROBE    5 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING          5 // Z position after probing is done
 
-#define Z_PROBE_LOW_POINT          -5 // Farthest distance below the trigger-point to go before stopping
+#if ENABLED(KNUTWURST_BLTOUCH)
+    #define Z_PROBE_LOW_POINT          -5 // Farthest distance below the trigger-point to go before stopping
+#endif
+
+#if DISABLED(KNUTWURST_BLTOUCH)
+    #define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
+#endif
 
 // For M851 give a range for adjusting the Z probe offset
 #define Z_PROBE_OFFSET_RANGE_MIN -40
 #define Z_PROBE_OFFSET_RANGE_MAX 20
 
 // Enable the M48 repeatability test to test probe accuracy
-#if ANYCUBIC_PROBE_VERSION > 0
+#if ANYCUBIC_PROBE_VERSION > 0 || ENABLED(KNUTWURST_BLTOUCH)
   #define Z_MIN_PROBE_REPEATABILITY_TEST
 #endif
 
@@ -1499,7 +1518,7 @@
 
   // Set the number of grid points per dimension.
   // Works best with 5 or more points in each dimension.
-  #define GRID_MAX_POINTS_X 5  // Olli
+  #define GRID_MAX_POINTS_X 5
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
@@ -1564,7 +1583,9 @@
 #if ENABLED(LCD_BED_LEVELING)
   #define MESH_EDIT_Z_STEP  0.05  // (mm) Step size while manually probing Z axis.
   #define LCD_PROBE_Z_RANGE 4     // (mm) Z Range centered on Z_MIN_POS for LCD Z adjustment
-  #define MESH_EDIT_MENU        // Add a menu to edit mesh points
+  #if DISABLED(KNUTWURST_BLTOUCH)
+      #define MESH_EDIT_MENU        // Add a menu to edit mesh points
+  #endif
 #endif
 
 // Add a menu item to move between bed corners for manual bed adjustment
